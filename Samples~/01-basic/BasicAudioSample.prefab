@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4361528617246137323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 552169786678407816}
+  - component: {fileID: 5815252597694583763}
+  m_Layer: 0
+  m_Name: BasicAudioSample
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &552169786678407816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4361528617246137323}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5815252597694583763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4361528617246137323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257ada415ea4f8149a88559c3fcca9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Hlight.Audio.Samples.Basic::Hlight.Audio.Samples.Basic.BasicAudioSample
+  config:
+    mixer: {fileID: 24100000, guid: 6b8986fc6d8e4054cafb4b3dca3865f1, type: 2}
+    channels:
+    - {fileID: 11400000, guid: 70f3ed1a5f9b79147aa9ebf508791c25, type: 2}
+    - {fileID: 11400000, guid: 0e4975a871609d543b13b060e16a64fd, type: 2}
+    - {fileID: 11400000, guid: 678c54b2cbccc20dc09a4af3e46b46f1, type: 2}
+    voices: 12
+  sfx: {fileID: 11400000, guid: 0bb0dc7e2ac682a4e80ce7ddcf8f50b8, type: 2}
+  sfxChannel: {fileID: 11400000, guid: 0e4975a871609d543b13b060e16a64fd, type: 2}
+  music: {fileID: 11400000, guid: 1904234923e23e8b38bcc9c129208d39, type: 2}
+  musicChannel: {fileID: 11400000, guid: 678c54b2cbccc20dc09a4af3e46b46f1, type: 2}

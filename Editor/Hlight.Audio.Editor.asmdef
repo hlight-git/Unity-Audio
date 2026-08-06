@@ -1,0 +1,7 @@
+{
+  "name": "Hlight.Audio.Editor",
+  "rootNamespace": "Hlight.Audio.Editor",
+  "references": ["Hlight.Audio", "Unity.Addressables", "Unity.Addressables.Editor", "Unity.ResourceManager"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

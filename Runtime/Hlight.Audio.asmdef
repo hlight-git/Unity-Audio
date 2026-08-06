@@ -1,0 +1,6 @@
+{
+  "name": "Hlight.Audio",
+  "rootNamespace": "Hlight.Audio",
+  "references": ["UniTask", "UniTask.Addressables", "Unity.Addressables", "Unity.ResourceManager"],
+  "autoReferenced": true
+}

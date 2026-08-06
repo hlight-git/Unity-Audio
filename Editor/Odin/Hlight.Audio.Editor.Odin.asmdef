@@ -1,0 +1,15 @@
+{
+    "name": "Hlight.Audio.Editor.Odin",
+    "rootNamespace": "Hlight.Audio.Editor",
+    "references": ["Hlight.Audio", "Hlight.Audio.Editor"],
+    "includePlatforms": ["Editor"],
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Sirenix.OdinInspector.Editor.dll",
+        "Sirenix.OdinInspector.Attributes.dll",
+        "Sirenix.Utilities.dll",
+        "Sirenix.Utilities.Editor.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": ["ODIN_INSPECTOR"]
+}

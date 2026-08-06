@@ -1,0 +1,6 @@
+{
+  "name": "Hlight.Audio.Samples.Basic",
+  "rootNamespace": "Hlight.Audio.Samples.Basic",
+  "references": ["Hlight.Audio", "UniTask", "Unity.Addressables", "Unity.ResourceManager"],
+  "autoReferenced": true
+}

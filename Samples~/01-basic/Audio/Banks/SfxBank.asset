@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a414b20689ccf0f45982c8c39e98e05b, type: 3}
+  m_Name: SfxBank
+  m_EditorClassIdentifier: Hlight.Audio.Samples.Basic::Hlight.Audio.Samples.Basic.SfxBank
+  entries:
+  - key: 0
+    cue: {fileID: 11400000, guid: affecedc1875f2643b2c1c6f63dbfbbc, type: 2}
+  - key: 1
+    cue: {fileID: 11400000, guid: c4996be8fa1e58041959e29896d86064, type: 2}
+  - key: 2
+    cue: {fileID: 11400000, guid: 3bd6e0bec332eea41b679f4317a6e580, type: 2}
+  exclusive: 0

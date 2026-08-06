@@ -1,0 +1,21 @@
+{
+  "name": "com.hlight.audio",
+  "version": "1.0.0",
+  "displayName": "Hlight Audio",
+  "description": "Casual-game audio: enum-keyed banks over Addressables, channel assets, per-cue polyphony limiting. Type-safe without codegen.",
+  "unity": "6000.0",
+  "author": {
+    "name": "Hlight"
+  },
+  "dependencies": {
+    "com.unity.addressables": "2.9.1",
+    "com.cysharp.unitask": "2.5.11"
+  },
+  "samples": [
+    {
+      "displayName": "01 - Basic",
+      "description": "SfxId enum + SfxBank asset + two channels. Import, build Addressables, press Play.",
+      "path": "Samples~/01-basic"
+    }
+  ]
+}
