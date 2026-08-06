@@ -15,7 +15,6 @@ namespace Hlight.Audio.Tests
     {
         private const string RESULT_PATH = "Temp/audio-tests.txt";
 
-        [MenuItem("Tools/Hlight/Run Audio Tests")]
         public static void Run()
         {
             var report = new StringBuilder();
