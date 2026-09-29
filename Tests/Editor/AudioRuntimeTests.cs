@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -109,6 +110,28 @@ namespace Hlight.Audio.Tests
 
                 runtime.Stop(first);
                 Assert.IsTrue(runtime.IsPlaying(second), "stopping through a stale handle must not stop the recycled slot's sound");
+            }
+            finally { runtime.Dispose(); }
+        }
+
+        [Test]
+        public void Play_RoutesTheClipThroughClipOverride()
+        {
+            // ClipOverride is the one seam asset mods use; if Play stops consulting it, modded
+            // sounds silently fall back to the authored clip.
+            var runtime = new AudioRuntime(new AudioRuntimeConfig { voices = 1 });
+            try
+            {
+                var cue = Cue();
+                var authored = Track(AudioClip.Create("authored", 128, 1, 8000, false));
+                var modded = Track(AudioClip.Create("modded", 128, 1, 8000, false));
+                runtime.ClipOverride = clip => clip == authored ? modded : clip;
+
+                Assert.IsTrue(runtime.Play(cue, authored).IsSome);
+
+                var playing = Object.FindObjectsByType<SoundSource>(FindObjectsSortMode.None)
+                    .Single(s => s.IsBusy).GetComponent<AudioSource>().clip;
+                Assert.AreSame(modded, playing);
             }
             finally { runtime.Dispose(); }
         }

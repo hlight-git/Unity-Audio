@@ -30,6 +30,12 @@ namespace Hlight.Audio
         /// </summary>
         public static AudioRuntime Current { get; set; }
 
+        /// <summary>
+        /// Swaps the clip right before it starts playing. Null plays the clip as given. Used by
+        /// runtime asset mods; must return a non-null clip for a non-null input.
+        /// </summary>
+        public Func<AudioClip, AudioClip> ClipOverride { get; set; }
+
         private readonly AudioRuntimeConfig _config;
         private readonly SoundSource[] _sources;
         private readonly GameObject _root;
@@ -85,6 +91,7 @@ namespace Hlight.Audio
 
             _lastStart[cue] = now;
             float fade = fadeIn >= 0f ? fadeIn : cue.fadeIn;
+            if (ClipOverride != null) clip = ClipOverride(clip);
             int generation = _sources[slot].Begin(cue, clip, cue.channel.group, follow, volumeScale, fade, now);
             if (_paused) _sources[slot].SetPaused(true); // don't let a sound started mid-pause play at full volume
             return new SoundHandle(slot, generation);
